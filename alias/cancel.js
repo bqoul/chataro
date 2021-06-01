@@ -2,7 +2,7 @@ module.exports = (ctx, queue) => {
     //removing user from the queue
     queue.splice(queue.indexOf(ctx.from.id));
     //and notifying him about it
-    ctx.editMessageText("you have been removed from the queue", {
+    ctx.editMessageText("you left the queue", {
         reply_markup: {
             inline_keyboard: [
                 [
