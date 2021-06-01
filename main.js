@@ -8,7 +8,7 @@ let interlocutor = {};
 let id = {};
 
 bot.start(ctx => {
-    //checking if user is not connected to someone and user is not waiting in the queue
+    //checking if user is not connected to someone and not waiting in the queue
     if(!interlocutor[ctx.from.id] && !queue.includes(ctx.from.id)) {
         const start = require("./alias/start");
         start(ctx);
