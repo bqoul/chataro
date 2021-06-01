@@ -2,9 +2,9 @@ const bot = require("./bot");
 
 //empty queue array
 let queue = [];
-//empty object with connected ids
+//empty object for connected ids
 let interlocutor = {};
-//empty object with message/chat ids
+//empty object for message/chat ids
 let id = {};
 
 bot.start(ctx => {
