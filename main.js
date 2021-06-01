@@ -8,13 +8,10 @@ let interlocutor = {};
 let id = {};
 
 bot.start(ctx => {
-    //checking if user is connected to someone to prevent usage of /start command
+    //checking if user is connected to someone or if user is not waiting in the queue
     if(!interlocutor[ctx.from.id] && !queue.includes(ctx.from.id)) {
-        //then checking if user is not waiting in the queue
-        // if(!queue.includes(ctx.from.id)) {
-            const start = require("./alias/start");
-            start(ctx);
-        // }
+        const start = require("./alias/start");
+        start(ctx);
     }
 });
 
