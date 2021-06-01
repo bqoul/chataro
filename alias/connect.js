@@ -14,6 +14,7 @@ module.exports = async (ctx, queue, interlocutor, id) => {
         }
     });
 
+    //pushing user id to the queue & getting position of the second user in queue
     let position = queue.push(ctx.from.id) - 2;
 
     //saving the message & chat id to delete previous message if user is connected to someone
